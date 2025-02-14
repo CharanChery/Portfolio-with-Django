@@ -1,0 +1,567 @@
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  /* --clr-accent: #16e0bd; */
+  --clr-accent: #a3e016;
+  --clr-lightviolet: #ecc0ff;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+}
+strong {
+  font-weight: var(--fw-bold);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+@font-face {
+  font-family: Philosopher;
+  src: url(../Fonts/Philosopher/Philosopher-Regular.ttf);
+}
+@font-face {
+  font-family: Philosopher-Bold;
+  src: url(../Fonts/Philosopher/Philosopher-Bold.ttf);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.main {
+  /* border: solid; */
+  /* width: 100vw; */
+  /* height: 100vh; */
+  background: linear-gradient(
+    to right,
+    rgba(255, 199, 115, 0.207),
+    rgba(136, 255, 165, 0.207),
+    rgba(115, 239, 255, 0.207)
+  );
+  overflow: hidden;
+}
+
+.cloud {
+  display: flex;
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 20px;
+  background: linear-gradient(
+    -45deg,
+    var(--clr-accent),
+    rgba(245, 179, 229, 0.27)
+  );
+}
+
+.cloud1 {
+  width: 80px;
+  height: 80px;
+  top: 100px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+
+.cloud2 {
+  width: 80px;
+  height: 80px;
+  top: 100px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+
+.cloud3 {
+  width: 80px;
+  height: 80px;
+  top: 400px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud4 {
+  width: 80px;
+  height: 80px;
+  top: 400px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud5 {
+  width: 80px;
+  height: 80px;
+  top: 700px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud6 {
+  width: 80px;
+  height: 80px;
+  top: 700px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud7 {
+  width: 80px;
+  height: 80px;
+  top: 1000px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud8 {
+  width: 80px;
+  height: 80px;
+  top: 1000px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud9 {
+  width: 80px;
+  height: 80px;
+  top: 1300px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud10 {
+  width: 80px;
+  height: 80px;
+  top: 1300px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud11 {
+  width: 80px;
+  height: 80px;
+  top: 1600px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud12 {
+  width: 80px;
+  height: 80px;
+  top: 1600px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud13 {
+  width: 80px;
+  height: 80px;
+  top: 1900px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud14 {
+  width: 80px;
+  height: 80px;
+  top: 1900px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud15 {
+  width: 80px;
+  height: 80px;
+  top: 2200px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud16 {
+  width: 80px;
+  height: 80px;
+  top: 2200px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud17 {
+  width: 80px;
+  height: 80px;
+  top: 2500px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud18 {
+  width: 80px;
+  height: 80px;
+  top: 2500px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.navigation {
+  /* border: 1px solid; */
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  border-bottom: 0.2px solid #96898943;
+  /* background-color: #edf1f4; */
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  text-transform: uppercase;
+  font-family: Philosopher;
+
+}
+.navigation img[alt="logo"] {
+  /* border: 1px solid; */
+  margin: 8px 0 0 35px;
+  width: 380px;
+}
+.linksto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  /* border: solid; */
+}
+
+.linksto ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: solid; */
+  gap: 80px;
+}
+
+.linksto ul li a {
+  /* border: solid; */
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: var(--fw-bold);
+  /* color: var(--clr-light) */
+  color: rgba(51, 71, 30, 0.801);
+}
+.linksto li a {
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+.linksto a:hover {
+  /* text-decoration: underline; */
+  border-bottom: 2px solid rgb(127, 179, 74);
+  color: forestgreen;
+}
+.linksto ul li a[title = "Certification"]{
+  color: rgb(255, 142, 4);
+  border-bottom: 2px solid rgb(255, 142, 4);
+
+}
+
+.menu-icon {
+  color: black;
+  font-size: 25px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+  border: 5px solid transparent;
+}
+.menu-icon:hover {
+  font-size: 23px;
+  border-radius: 20px;
+}
+
+.Certificates_sec {
+  /* border: solid red; */
+  width: 80vw;
+  /* height: 100vw; */
+  display: flex;
+  margin: 11vh auto auto auto;
+  display: flex;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+}
+
+.ITcert {
+  /* border: solid; */
+  width: 95%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.ITcert h2 {
+  color: #153259;
+  font-size: var(--fs-h1);
+  /* text-decoration: underline; */
+  text-shadow: #153259;
+  text-align: center;
+  font-family: Philosopher-Bold;
+
+}
+.textarea,
+#allimg {
+  /* border: solid; */
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  font-family: Philosopher;
+    
+}
+.microsoftAI {
+  /* border: solid blue; */
+  width: 1500px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.textarea {
+  /* border: solid; */
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0px 20px 20px 0px;
+  flex-wrap: wrap;
+  padding: 25px;
+  /* border: solid; */
+}
+
+.textarea h3 {
+  color: rgb(255, 132, 0);
+  font-size: 1.4rem;
+  text-align: center;
+}
+.textarea p {
+  color: #153259;
+  text-align: justify;
+}
+.textarea button {
+  border: transparent;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  background-color: #a3e016;
+  color: azure;
+  cursor: pointer;
+  font-family: Philosopher;
+
+}
+
+.imgcontainer-1 {
+  order: 0;
+  /* border: solid green; */
+  border-radius: 20px 0 0 20px;
+  width: 900px;
+  height: 400px;
+  /* object-fit: contain; */
+  overflow: hidden;
+  position: relative;
+  /* z-index: 12; */
+}
+
+.microsoftAI img[alt="MAI"] {
+  width: 100%;
+  height: 100%;
+  /* border: solid green; */
+  border-radius: 20px 0px 0px 20px;
+  position: absolute;
+  /* pointer-events: none; */
+  cursor: pointer;
+}
+
+.microsoftMTA {
+  /* border: solid blue; */
+  width: 1500px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.microsoftMTA .textarea {
+  border-radius: 20px 0px 0px 20px;
+}
+.imgcontainer-2 {
+  order: 1;
+  /* border: solid green; */
+  border-radius: 0 20px 20px 0;
+  width: 900px;
+  height: 400px;
+}
+.microsoftMTA img[alt="MTA"] {
+  width: 100%;
+  height: 100%;
+  order: 2;
+  /* border: solid green; */
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  overflow: hidden;
+  object-fit: contain;
+  /* left: -80px; */
+}
+
+.PyforDS {
+  /* border: solid blue; */
+  width: 1500px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.PyforDS .textarea {
+  border-radius: 0px 20px 20px 0px;
+}
+.imgcontainer-3 {
+  order: 0;
+  /* border: solid green; */
+  border-radius: 0 20px 20px 0;
+  width: 900px;
+  height: 400px;
+}
+.PyforDS img[alt="PyforDSCert"] {
+  width: 100%;
+  height: 100%;
+  /* order: -1 */
+  /* border: solid green; */
+  border-radius: 20px 0px 0px 20px;
+  position: relative;
+  /* left: -80px; */
+}
+
+.SoftwareEngin {
+  /* border: solid blue; */
+  width: 1100px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.SoftwareEngin .textarea {
+  border-radius: 20px 0px 0px 20px;
+}
+.imgcontainer-4 {
+  order: 1;
+  /* border: solid green; */
+  border-radius: 0 20px 20px 0;
+  width: 950px;
+  height: 400px;
+}
+.imgcontainer-4 img[alt="SoftwareEngineering"] {
+  width: 100%;
+  height: 100%;
+  order: 2;
+  /* border: solid green; */
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  /* left: -80px; */
+}
+
+.SQLBasic {
+  /* border: solid blue; */
+  width: 1100px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.SQLBasic .textarea {
+  border-radius: 0px 20px 20px 0px;
+}
+.imgcontainer-5 {
+  order: 0;
+  /* border: solid green; */
+  border-radius: 0 20px 20px 0;
+  width: 950px;
+  height: 400px;
+}
+.imgcontainer-5 img[alt="SQL_Basic"] {
+  width: 100%;
+  height: 100%;
+  /* border: solid green; */
+  border-radius: 20px 0px 0px 20px;
+  position: relative;
+  /* left: -80px; */
+}
+
+.PythBasic {
+  /* border: solid blue; */
+  width: 1100px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+.PythBasic .textarea {
+  border-radius: 20px 0px 0px 20px;
+}
+.imgcontainer-6 {
+  /* display: flex; */
+  order: 1;
+  /* border: solid green; */
+  border-radius: 0 20px 20px 0;
+  width: 920px;
+  height: 400px;
+}
+.imgcontainer-6 img[alt="Pyth_Basic"] {
+  width: 100%;
+  height: 100%;
+  order: 2;
+  /* object-fit: cover; */
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  /* left: -80px; */
+}
+
+#allimg {
+  /* border: solid; */
+  /* object-fit: contain; */
+  box-shadow: none;
+  /* width: 600px; */
+  background-color: white;
+  transition: scale 2s ease-in;
+}
+#allimg:hover {
+  /* transform: scale(1.1); */
+}
+
+::-webkit-scrollbar {
+  color: #a3e016;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 7px;
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background: #a3e016;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.207);
+}

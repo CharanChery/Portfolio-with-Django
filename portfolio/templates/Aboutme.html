@@ -1,0 +1,223 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charan's Portfolio</title>
+    <link rel="shortcut icon" href="{%static "img/suitcase.png" %}" type="image/x-icon">
+    {% comment %} <link rel="prefetch" href="Aboutme.html" />
+    <link rel="prefetch" href="Education_bgv.html" />
+    <link rel="prefetch" href="Certifications.html" />
+    <link rel="prefetch" href="Projects.html" /> {% endcomment %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Update these with your own fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="{% static "CSS/About.css" %}" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Clouds -->
+      <div class="squareanime">
+        <div class="square square1"></div>
+        <div class="square square2"></div>
+        <div class="square square3"></div>
+        <div class="square square4"></div>
+        <div class="square square5"></div>
+        <div class="square square6"></div>
+        <div class="square square7"></div>
+        <div class="square square8"></div>
+      </div>
+      <!-- End of Clouds -->
+      <header>
+        <div class="navigation">
+          <a href="./index.html"><img src="{%static "img/logo1.svg" %}" alt="logo" /></a>
+          <div class="linksto">
+            <ul>
+              <li>
+                <a href="{% url 'portfolio' 'home' %}">Home</a>
+              </li>
+              <li>
+                <a href="{% url 'portfolio' 'aboutme' %}" style="cursor: pointer" title="Aboutme">About Me</a>
+              </li>
+              <li><a href="{% url 'portfolio' 'certifications' %}">Certifications</a></li>
+              <li><a href="{% url 'portfolio' 'projects' %}">Projects</a></li>
+              <li>
+                <a href="{% url 'portfolio' 'contactme' %}" style="cursor: pointer"
+                  >Contact Me</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="menu-icon">
+            <!-- <i class="fa-solid fa-bars"></i> -->
+            <i class="bi bi-list"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- About Card -->
+      <section class="About-page">
+        <div class="About-intro">
+          <h2>Who was I am?</h2>
+          <p>
+            My name is Jnana Charan, I was graduated recently from the degree of Bachelor of Technology in the stream of Computer Science & Engineering with an aggregrate score of 8.1 CGPA.
+            Coming to my Skills, where I was implement each and every skill in a practical mode which gives experience in debugging the logics, problem solving, ability to understand the usages, time management etc which develops my skillset in a better mode to solve the complex problems of real time projects. I had done projects like Auction bidding platform which was developed on Nodejs and Express JS, Screen Recording Application using Python Programming.
+          </p>
+        </div>
+        <div class="myJourney">
+          <h2>Qualifications</h2>
+          <div class="Education-det">
+            <div id="btech">
+              <h3>Bachelor of Technology:</h3>
+              <p><strong>Stream:</strong> Computer Science & Engineering</p>
+              <p><strong>University:</strong> Jawaharlal Nehru Technological University</p>
+              <p>
+                <strong>Institute Name:</strong> SRK Institute of Technology,
+                Vijayawada
+              </p>
+
+              <p><strong>CGPA:</strong> 8.1/10</p>
+
+              <p><strong>YOP:</strong> 2020-2024</p>
+            </div>
+            <div id="inter">
+              <h3>Board of Intermediate Education, Andhra Pradesh:</h3>
+              <p><strong>Stream:</strong> Mathematics Physics & Chemistry</p>
+
+              <p><strong>Institute Name:</strong> Narayana Junior College, Vijayawada</p>
+
+              <p><strong>CGPA:</strong> 9.61/10</p>
+
+              <p><strong>YOP:</strong> 2018-2020</p>
+            </div>
+            <div id="Xth">
+              <h3>Board of Secondary Education, Andhra Pradesh:</h3>
+              <p><strong>Stream: </strong> High School</p>
+
+              <p><strong>School Name:</strong> Flora High School, Vuyyuru</p>
+
+              <p><strong>CGPA:</strong> 9.5/10</p>
+
+              <p><strong>YOP:</strong> 2017-2018</p>
+            </div>
+          </div>
+        </div>
+        <div class="my-Skills">
+          <div class="IT">
+          <h2>Skill Set</h2>
+              <div class="tname">
+                <p>Python</p>
+                <div class="percent">
+                  <p>Proficient</p>
+                  <div class="score">
+                    <div class="progress" id="pro"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tname">
+                <p>Java</p>
+                <div class="percent">
+                  <p>Intermediate</p>
+                  <div class="score">
+                    <div id="int"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tname">
+                <p>C Programming</p>
+                <div class="percent">
+                  <p>Intermediate</p>
+                  <div class="score">
+                    <div id="int"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tname">
+                <p>Oracle SQL</p>
+                <div class="percent">
+                  <p>Proficient</p>
+                  <div class="score">
+                    <div id="pro"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tname">
+                <p>MySQL</p>
+                <div class="percent">
+                  <p>Proficient</p>
+                  <div class="score">
+                    <div id="pro"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tname">
+                <p>HTML5</p>
+                <div class="percent">
+                  <p>Intermediate</p>
+                  <div class="score">
+                    <div id="int"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tname">
+                <p>CSS3</p>
+                <div class="percent">
+                  <p>Intermediate</p>
+                  <div class="score">
+                    <div id="int"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tname">
+                <p>Javascript</p>
+                <div class="percent">
+                  <p>Intermediate</p>
+                  <div class="score">
+                    <div id="int"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tname">
+                <p>Django</p>
+                <div class="percent">
+                  <p>Basic</p>
+                  <div class="score">
+                    <div id="bas"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="tname">
+                <p>ReactJS</p>
+                <div class="percent">
+                  <p>Basic</p>
+                  <div class="score">
+                    <div id="bas"></div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,500 @@
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+  --fw-reg: 300;
+  --fw-bold: 900;
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  /* --clr-accent: #16e0bd; */
+  --clr-accent: #a3e016;
+  --clr-lightviolet: #ecc0ff;
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.1rem;
+  --fs-body: 1rem;
+}
+strong {
+  font-weight: var(--fw-bold);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+
+  /* overflow: hidden; */
+}
+
+@font-face {
+  font-family: Philosopher;
+  src: url(../Fonts/Philosopher/Philosopher-Regular.ttf);
+}
+@font-face {
+  font-family: Philosopher-Bold;
+  src: url(../Fonts/Philosopher/Philosopher-Bold.ttf);
+}
+@font-face {
+  font-family: Philosopher-Italic;
+  src: url(../Fonts/Philosopher/Philosopher-Italic.ttf);
+}
+
+.navigation {
+  /* border: 1px solid; */
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  border-bottom: 0.2px solid #96898943;
+  /* background-color: #edf1f4; */
+  background-color: #fff;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  text-transform: uppercase;
+  font-family: Philosopher;
+  
+}
+.navigation img[alt="logo"] {
+  /* border: 1px solid; */
+  margin: 8px 0 0 35px;
+  width: 380px;
+}
+.linksto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  /* border: solid; */
+}
+
+.linksto ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: solid; */
+  gap: 80px;
+}
+
+.linksto ul li a {
+  /* border: solid; */
+  text-decoration: none;
+  text-align: center;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  /* color: var(--clr-light) */
+  color: rgba(51, 71, 30, 0.801);
+}
+.linksto li a {
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+.linksto a:hover {
+  /* text-decoration: underline; */
+  border-bottom: 2px solid rgb(127, 179, 74);
+  color: forestgreen;
+}
+
+.linksto ul li a[title = "Aboutme"]{
+  color: rgb(255, 142, 4);
+  border-bottom: 2px solid rgb(255, 142, 4);
+}
+
+.menu-icon {
+  color: black;
+  font-size: 25px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+  border: 5px solid transparent;
+}
+.menu-icon:hover {
+  font-size: 23px;
+  border-radius: 20px;
+}
+
+.square {
+  display: flex;
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  background: linear-gradient(
+    -45deg,
+    var(--clr-accent),
+    rgba(245, 179, 229, 0.27)
+  );
+}
+
+.square1 {
+  width: 80px;
+  height: 80px;
+  top: 100px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+
+.square2 {
+  width: 80px;
+  height: 80px;
+  top: 100px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+
+.square3 {
+  width: 80px;
+  height: 80px;
+  top: 350px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.square4 {
+  width: 80px;
+  height: 80px;
+  top: 350px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+.square5 {
+  width: 80px;
+  height: 80px;
+  top: 600px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.square6 {
+  width: 80px;
+  height: 80px;
+  top: 600px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+.square7 {
+  width: 80px;
+  height: 80px;
+  top: 880px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.square8 {
+  width: 80px;
+  height: 80px;
+  top: 880px;
+  right: 50px;
+  animation: animate1 5s ease infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+body{
+  background: linear-gradient(
+    to right,
+    rgba(255, 199, 115, 0.207),
+    rgba(136, 255, 165, 0.142),
+    rgba(115, 239, 255, 0.142)
+  );
+}
+.About-page {
+  width: 80vw;
+  /* border: solid; */
+  /* height: 130vh; */
+  margin: 11vh auto auto auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.About-intro {
+  width: 75vw;
+  height: 190px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 30px 10px #a3e0162b;
+  position: relative;
+  top: 20px;
+  /* font-style: italic; */
+  color: darkslategray;
+  background: white;
+  /* border: solid; */
+}
+
+.About-intro h2 {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  position: relative;
+  left: 33px;
+  padding: 10px;
+  color: goldenrod;
+  font-family: Philosopher-Italic;
+}
+
+.About-intro h2::first-letter{
+
+  /* border: solid black; */
+  font-size: 50px;
+  color: rgb(255, 142, 4);
+}
+
+.About-intro p {
+  width: 75vw;
+  height: 80px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  font-size: medium;
+  font-weight: normal;
+  font-size: 16.7px;
+  text-align: justify;
+  font-family: Philosopher;
+}
+
+
+.myJourney {
+  width: 35vw;
+  height: 630px;
+  /* border: solid red; */
+  position: relative;
+  top: 80px;
+  border-radius: 20px;
+  /* box-shadow: 2px 2px 30px 10px #16e0b12b; */
+  box-shadow: 2px 2px 30px 10px rgba(255, 123, 0, 0.162);
+  padding: 10px;
+  /* font-style: italic; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 150px;
+  background-color: white;
+}
+.myJourney h2 {
+  text-align: center;
+  /* border: solid; */
+  display: block;
+  width: 300px;
+  position: relative;
+  color: goldenrod;
+  border-bottom: 0.1px solid;
+  font-family: Philosopher-Italic;
+
+}
+.myJourney .Education-det {
+  /* border: solid red; */
+  display: block;
+  padding: 0px 20px 0px 20px;
+  /* margin-top: -40px; */
+  position: relative;
+  top: -20px;
+}
+#btech,
+#inter,
+#Xth {
+  display: block;
+  /* border: solid; */
+  margin: auto auto auto 10px;
+  width: 460px;
+  padding: 8px;
+  border-bottom: 0.1px solid #3030302f;
+}
+#btech h3,
+#inter h3,
+#Xth h3 {
+  font-size: 20px;
+  /* color: rgb(127, 104, 243); */
+  color: blueviolet;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  font-family: Philosopher;
+}
+#btech strong,
+#inter strong,
+#Xth strong {
+  /* color: darkorange; */
+  font-weight: 100;
+  color: lightcoral;
+  font-family: Philosopher;
+}
+#btech p,
+#inter p,
+#Xth p {
+  font-size: 18px;
+  color: #5f7050;
+  font-weight: 500;
+  /* text-align:justify */
+  padding: 3px;
+  font-family: Philosopher;
+
+}
+
+.my-Skills {
+  width: 35vw;
+  height: 630px;
+  /* border: solid red; */
+  position: relative;
+  top: 80px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 30px 10px #16e0b12b;
+  /* font-style: italic; */
+  /* font-size: 16px; */
+  margin-bottom: 150px;
+}
+.IT {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* border: solid violet; */
+}
+.IT h2 {
+  text-align: center;
+  /* border: solid; */
+  display: block;
+  width: 300px;
+  position: relative;
+  top: 20px;
+  color: goldenrod;
+  border-bottom: 0.1px solid;
+  font-family: Philosopher;
+
+}
+.tname {
+  color: blueviolet;
+  width: 450px;
+  border-bottom: 0.2px solid #3030302f;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 20px;
+  padding: 17px; /*Change the value here so I can add another skill in space*/
+  font-family: Philosopher;
+
+}
+.tname p {
+  font-size: 17px;
+  font-weight: 800;
+}
+.percent {
+  /* border: solid blue; */
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.percent p {
+  /* border: solid; */
+  width: 90px;
+  font-weight: normal;
+  color: lightcoral;
+  font-family: Philosopher-Italic;
+
+}
+.score {
+  width: 150px;
+  height: 20px;
+  /* border: solid red; */
+  background-color: rgba(164, 164, 164, 0.178);
+  border-radius: 10px;
+  /* display: flex;
+  justify-content: space-between;
+  align-items:center; */
+}
+.score:hover {
+  transform: scale(1.2);
+}
+
+#pro {
+  width: 94%;
+  height: 7.9px;
+  /* background-color: #16e0b17d; */
+  background: linear-gradient(to right, #00d5ff, #0066ff);
+  border-radius: 20px;
+  /* margin:2.9px ; */
+  position: relative;
+  left: 4.8px;
+  top: 5.999px;
+  animation: growpro 3s ease-in-out forwards;
+}
+#int {
+  width: 66%;
+  height: 7.9px;
+  background: linear-gradient(to right, #11ff00, #16e0b17d);
+  border-radius: 20px;
+  /* margin:2.9px ; */
+  position: relative;
+  left: 4.8px;
+  top: 5.999px;
+  animation: growint 3s ease-in-out forwards;
+}
+#bas {
+  width: 50%;
+  height: 7.9px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 94, 0, 0.658),
+    rgb(255, 162, 0)
+  );
+  border-radius: 20px;
+  /* margin:2.9px ; */
+  position: relative;
+  left: 4.8px;
+  top: 5.999px;
+  animation: growbas 3s ease-in-out forwards;
+}
+
+@keyframes growpro {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 94%;
+  }
+}
+
+@keyframes growint {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 66%;
+  }
+}
+
+@keyframes growbas {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+::-webkit-scrollbar {
+  color: #a3e016;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 7px;
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background: #a3e016;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.207);
+}

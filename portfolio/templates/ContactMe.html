@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charan's Portfolio</title>
+    {% comment %} <link rel="prefetch" href="Aboutme.html" />
+    <link rel="prefetch" href="Education_bgv.html" />
+    <link rel="prefetch" href="Certification" />
+    <link rel="prefetch" href="Projects" /> {% endcomment %}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Update these with your own fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="{% static "CSS/ContactMe.css"%}" />
+    <link rel="shortcut icon" href="{% static "img/suitcase.png"%}" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Clouds -->
+      <div class="cloudanime">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="cloud cloud4"></div>
+        <div class="cloud cloud5"></div>
+        <div class="cloud cloud6"></div>
+      </div>
+      <!-- End of Clouds -->
+      <header>
+        <div class="navigation">
+          <a href="./index.html"><img src="{% static "img/logo1.svg" %}" alt="logo" /></a>
+          <div class="linksto">
+            <ul>
+              <li>
+                <a href="{% url 'portfolio' 'home' %}">Home</a>
+              </li>
+              <li>
+                <a href="{% url 'portfolio' 'aboutme' %}" style="cursor: pointer">About Me</a>
+              </li>
+              <li><a href="{% url 'portfolio' 'certifications' %}">Certifications</a></li>
+              <li><a href="{% url 'portfolio' 'projects' %}">Projects</a></li>
+              <li>
+                <a href="{% url 'portfolio' 'contactme' %}" title="ContactMe">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-icon">
+            <!-- <i class="fa-solid fa-bars"></i> -->
+            <i class="bi bi-list"></i>
+          </div>
+        </div>
+      </header>
+      <div class="Main-content">
+        <div class="title-box">
+          <h1>Contact &nbsp;Me</h1>
+          <div class="Smalltitle-box">
+            <p>You can fill your details here so I will connect you on mail.</p>
+          </div>
+        </div>
+        
+        <div class="details-fill-form">
+          <form action="{% url 'send_email' %}" method="post">
+            {% csrf_token %}
+            <label for="name"> <span>Name:</span> </label>
+            <input
+              type="text"
+              id="name"
+              name = "name"
+              required
+              placeholder="Enter your Name 😊"
+            />
+            <label for="email"> <span>Mail-Id:</span> </label>
+            <input
+              type="email"
+              id="email"
+              name = "email"
+              required
+              placeholder="Enter your mail-id 📧"
+            />
+            <label for="Message"> <span>Message:</span> </label>
+            <input
+              type="text"
+              id="Message"
+              name = "message"
+              placeholder="Enter any message ✨"
+            />
+            <div class="but">
+            <button>Submit</button>
+            </div>
+            
+          </form>
+          {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+                <li class = "{{message.tags}}">{{message}} </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        <div class="myLinks">
+          <h3>Connect Me on:</h3>
+          <a href="mailto:narayanamjnanacharan@gmail.com" target="_blank" rel="noopener"><img src="{% static "img/ContactMe/mail.png"%}" alt="mail"></a>
+          <a href="https://github.com/CharanChery" target="_blank" rel="noopener"><img src="{% static "img/ContactMe/github.png"%}" alt="github"></a>
+          <a href="https://www.linkedin.com/in/narayanam-jnana-charan/" target="_blank" rel="noopener"><img src="{% static "img/ContactMe/LinkedIn-150x150.png"%}" alt="linkedin"></a>
+          <p></p>
+          <a href="https://www.hackerrank.com/profile/jnanacharan" target="_blank" rel="noopener"><img src="{% static "img/ContactMe/Hacker rank.png"%}" alt="Hackerrank"></a>
+          <a href="https://leetcode.com/u/narayanamjnanacharan/" target="_blank" rel="noopener"><img src="{% static "img/ContactMe/Leetcode.png"%}" alt="leetcode"></a>
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static "JS/script.js"%}"></script>
+    <script>
+      {% comment %} alert("Page is Working On contact Me Mailing system, you can use mail, linkedin, github to contact Me, I hope you're Good understander...😊") {% endcomment %}
+    </script>
+
+  </body>
+</html>

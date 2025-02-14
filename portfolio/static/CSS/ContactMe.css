@@ -1,0 +1,389 @@
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  /* --clr-accent: #16e0bd; */
+  --clr-accent: #a3e016;
+  --clr-lightviolet: #ecc0ff;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+}
+@font-face {
+  font-family: Philosopher;
+  src: url(../Fonts/Philosopher/Philosopher-Regular.ttf);
+}
+@font-face {
+  font-family: Philosopher-Bold;
+  src: url(../Fonts/Philosopher/Philosopher-Bold.ttf);
+}
+strong {
+  font-weight: var(--fw-bold);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.cloud {
+  display: flex;
+  position: absolute;
+  /* border: 1px solid white; */
+  border-radius: 10px;
+  background: linear-gradient(
+    -45deg,
+    var(--clr-accent),
+    rgba(245, 179, 229, 0.27)
+  );
+}
+
+.cloud1 {
+  width: 80px;
+  height: 80px;
+  top: 100px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+
+.cloud2 {
+  width: 80px;
+  height: 80px;
+  top: 100px;
+  right: 50px;
+  animation: animate2 5s ease infinite;
+}
+
+.cloud3 {
+  width: 80px;
+  height: 80px;
+  top: 350px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud4 {
+  width: 80px;
+  height: 80px;
+  top: 350px;
+  right: 50px;
+  animation: animate2 5s ease infinite;
+}
+.cloud5 {
+  width: 80px;
+  height: 80px;
+  top: 600px;
+  left: 50px;
+  animation: animate1 5s ease infinite;
+}
+.cloud6 {
+  width: 80px;
+  height: 80px;
+  top: 600px;
+  right: 50px;
+  animation: animate2 5s ease infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    opacity: 0;
+    /* transform: translateX(-20px); */
+    transform: translateX(-20px) rotate(-40deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    opacity: 0;
+    /* transform: translateX(-20px); */
+    transform: translateX(20px) rotate(-40deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+.navigation {
+  /* border: 1px solid; */
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  border-bottom: 0.2px solid #96898943;
+  /* background-color: #edf1f4; */
+  background-color: #fff;
+  font-family: Philosopher;
+}
+.navigation img[alt="logo"] {
+  /* border: 1px solid; */
+  margin: 8px 0 0 35px;
+  width: 380px;
+}
+.linksto {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  /* border: solid; */
+}
+
+.linksto ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: solid; */
+  gap: 80px;
+}
+
+.linksto ul li a {
+  /* border: solid; */
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  /* color: var(--clr-light) */
+  color: rgba(51, 71, 30, 0.801);
+}
+.linksto ul li a[title="ContactMe"] {
+  color: rgb(255, 142, 4);
+  border-bottom: 2px solid rgb(255, 142, 4);
+}
+
+.linksto li a {
+  border-bottom: 2px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+.linksto a:hover {
+  /* text-decoration: underline; */
+  border-bottom: 2px solid rgb(127, 179, 74);
+  color: forestgreen;
+}
+.menu-icon {
+  color: black;
+  font-size: 25px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+  border: 5px solid transparent;
+}
+.menu-icon:hover {
+  font-size: 23px;
+  border-radius: 20px;
+}
+
+/* Navbar CSS Completed */
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Mainpart Content Starts */
+
+.main {
+  /* border: solid; */
+  /* width: 100vw; */
+  /* height: 100vh; */
+  background: linear-gradient(
+    to right,
+    rgba(255, 199, 115, 0.207),
+    rgba(136, 255, 165, 0.207),
+    rgba(115, 239, 255, 0.207)
+  );
+  overflow: hidden;
+}
+
+.Main-content {
+  /* border: solid; */
+  width: 80vw;
+  height: 90vh;
+  margin: auto auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 15px 0px;
+}
+.Main-content .title-box {
+  /* border: solid red; */
+  width: 30vw;
+  height: 60vh;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  align-items: center;
+  
+  
+}
+.title-box h1 {
+  /* border: solid gray; */
+  font-family: Philosopher-Bold;
+  font-size: 4rem;
+  padding: 10px;
+  width: 20vw;
+  color: #153259;
+  
+}
+.title-box h1::first-letter {
+  font-size: 10rem;
+}
+.title-box p {
+  /* border: solid red; */
+  padding: 8px;
+  font-size: 16px;
+  position: relative;
+  top: -30px;
+  font-family: Philosopher;
+  color: #153259  ;
+}
+
+
+.details-fill-form {
+  /* border: solid blue; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 10px;
+  /* padding: 40px; */
+  flex-wrap: wrap;
+  position: relative;
+  top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+.details-fill-form label {
+  /* border: solid; */
+  display: block;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: #ff6a00;
+  font-family: Philosopher-Bold;
+
+}
+.details-fill-form input {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0.1px solid #153259;
+  padding: 19px;
+  /* text-align: center; */
+  font-family: Philosopher;
+  caret-color: #ff6a00;
+  color: #ff6a00;
+}
+.details-fill-form input:hover{
+  border: 1.3px solid grey;
+}
+.details-fill-form input:focus{
+  border: 1px solid #153259;
+  outline: none;
+}
+.details-fill-form #Message{
+  height: 80px;
+}
+
+.details-fill-form .but {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  position: relative;
+  top: 20px;
+  left: 90px;
+}
+.but button{
+  border: transparent;
+  font-family: Philosopher;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #a3e016;
+}
+.but button:hover{
+  background-color: #99c336;
+}
+
+.myLinks{
+  /* border: solid; */
+  width: 700px;
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  animation: rounder 3s linear infinite;
+  position: relative;
+  top: 30px;
+}
+@keyframes rounder {
+  50% {
+    box-shadow: 2px 3px 1px 8px rgba(255, 199, 115, 0.918);
+  }
+  100% {
+    box-shadow: 2px 2px 1px 8px rgba(136, 255, 166, 0.879);
+  }
+  0% {
+    box-shadow: 2px 2px 1px 8px rgb(115, 239, 255);
+  }
+  
+}
+.myLinks h3{
+  font-family: Philosopher;
+  font-size: 1.4rem;
+  color: #ff6a00;
+}
+.myLinks p{
+  border-left: rgb(211, 85, 26) solid 2px;
+  border-radius: .9px;
+  width: 10px;
+  height: 50px;
+}
+img[alt="mail"]{
+  width: 40px;
+  height: 40px;
+}
+img[alt="github"]{
+  width: 40px;
+  height: 40px;
+}
+img[alt="linkedin"]{
+  width: 50px;
+  height: 50px;
+}
+img[alt="Hackerrank"]{
+  width: 130px;
+  height: 50px;
+}
+img[alt="leetcode"]{
+  width: 120px;
+  height: 30px;
+}
+img[alt="mail"], img[alt="github"], img[alt="linkedin"], img[alt="Hackerrank"], img[alt="leetcode"]{
+  transition: transform .2s ease;
+}
+img[alt="mail"]:hover, img[alt="github"]:hover, img[alt="linkedin"]:hover, img[alt="Hackerrank"]:hover, img[alt="leetcode"]:hover{
+  transform: scale(1.1);
+}
