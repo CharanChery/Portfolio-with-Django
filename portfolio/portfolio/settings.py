@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-#50)d^3a@m1vflssx*16$(y)(s-hdv*#$abzd_oj%rwx3d5q4o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["jnana-charan.onrender.com"]
+ALLOWED_HOSTS = ["jnana-charan.onrender.com", "127.0.0.1", '.vercel.app']
 
 
 # Application definition
@@ -120,8 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # Directory where static files will be collected
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# Directory where static files will be collected
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Default primary key field type
